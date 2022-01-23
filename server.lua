@@ -8,7 +8,7 @@ local lang = Languages[Config.language]
 -- @desc Handle /me command
 local function onMeCommand(source, args)
     local playerName = GetPlayerName(source)
-    local text = "* " .. playerName .. table.concat(args, " ") .. " *"
+    local text = "* " .. playerName .. ": " .. table.concat(args, " ") .. " *"
     TriggerClientEvent('3dme:shareDisplay', -1, text, source)
 end
 
